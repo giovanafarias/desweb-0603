@@ -82,6 +82,25 @@ nav a {
     transition: color var(--transition-duration) ease;
 }
 
+nav a:hover {
+    color: var(--primary-color);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 0px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width var(--transition-duration) ease;
+}
+
 main {
     animation: fadeIn 0.5s ease-out;
 }
@@ -138,6 +157,11 @@ main {
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
     box-shadow: 0 4px 15px rgb(99 102 241 / .4);
     animation: slideInUp 0.8s ease-out 0.4s backwards;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(99, 102, 241, 0.6) 0px 8px 25px;
 }
 
 .hero-visual {
@@ -263,6 +287,11 @@ h2 {
     transition-delay: var(--transition-delay);
 }
 
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 24px;
+}
+
 .project-image {
     width: 100%;
     height: 200px;
@@ -345,6 +374,12 @@ h3 {
     transition: all var(--transition-duration) ease;
 }
 
+.project-tag:hover {
+    color: rgb(255, 255, 255);
+    transform: translateY(-2px);
+    background: var(--primary-color);
+}
+
 .contact {
     background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
     padding: 4rem 2rem;
@@ -388,6 +423,11 @@ h3 {
     width: fit-content;
 }
 
+.contact-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: #14b8a666 0px 8px 20px;
+}
+
 footer {
     background: rgb(15 23 42 / .95);
     color: #cbd5e1;
@@ -425,6 +465,11 @@ footer {
     text-decoration: none;
     transition: all var(--transition-duration) ease;
     transition-timing-function: ease-out;
+}
+
+.social-link:hover {
+    transform: translateY(-5px) rotate(360deg);
+    background: var(--secondary-color);
 }
 
 .footer-text {

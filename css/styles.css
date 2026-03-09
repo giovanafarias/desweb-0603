@@ -1,0 +1,217 @@
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #ec4899;
+    --accent-color: #14b8a6;
+    --dark-bg: #0f172a;
+    --light-bg: #f8fafc;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --transition-duration: 0.3s;
+    --transition-delay: 0.1s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--text-dark) 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    display: block;
+    unicode-bidi: isolate;
+    background: #0f172af2;
+    padding: 2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgb(0 0 0 / .1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff0;
+    background-clip: text;
+    transform: translateY(0);
+    animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+    0%,
+    100% {
+        transform: translateY (0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+div {}
+
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+    justify-items: center;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color var(--transition-duration) ease;
+}
+
+main {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero {
+    background: linear-gradient(135deg, rgb(99 102 241 / .1) 0%, rgb(236 72 153 / .1) 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.hero-text {
+    text-align: left;
+    padding-right: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: #f1f5f9;
+    margin-bottom: 1rem;
+    animation: slideInDown 0.8s ease-out;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    animation: slideInUp 0.8s ease-out 0.2s backwards;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+    box-shadow: 0 4px 15px rgb(99 102 241 / .4);
+    animation: slideInUp 0.8s ease-out 0.4s backwards;
+}
+
+.hero-visual {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.floating-box {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 20px;
+    grid-column: 1;
+    grid-row: 1;
+    animation: rotateBox 6s linear infinite, floatBox 4s ease-in-out infinite;
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateBox {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floatBox {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+}
+
+.projects {
+    background: #f8fafc;
+    padding: 4rem 2rem;
+}
+
+.contact {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
+    padding: 4rem 2rem;
+}
+
+footer {}

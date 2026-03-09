@@ -475,3 +475,45 @@ footer {
 .footer-text {
     grid-column: 1;
 }
+
+@media (max-width: 768px) {
+    .header-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    nav {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-text {
+        text-align: center;
+        padding-right: 0;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .floating-box {
+        width: 150px;
+        height: 150px;
+    }
+}
